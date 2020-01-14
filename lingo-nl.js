@@ -485,17 +485,21 @@ document.write(woord + '<br/>');
 
 var first = woord.charAt(0)
 document.getElementById('r1l1').innerHTML = first
+document.getElementById('r2l1').innerHTML = first
+document.getElementById('r3l1').innerHTML = first
+document.getElementById('r4l1').innerHTML = first
+document.getElementById('r5l1').innerHTML = first
 
-var letter = document.getElementById("letter");
-var button = document.getElementById("check");
-button.setAttribute("onclick", "checkWord(woord)");
+var input = document.getElementById("input");
+var check = document.getElementById("check");
+check.setAttribute("onclick", "checkWord()");
 
-function checkWord(event){
-	var letters = event.value.split("");
+function checkWord(){
+	var letters = input.value.split("");
 	console.log(letters);
 
-	for(i=0; i<5; i++){
-	if(letter.value == letters[i]){
+	for(i=0; i<letters.lenght; i++){
+	if(input.value == letters[i]){
 		document.getElementById("r1l" + (i+1)).innerHTML = letters[i];
 		document.getElementById("r1l" + (i+1)).style.backgroundColor = "green"
 	}

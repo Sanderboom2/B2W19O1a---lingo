@@ -478,12 +478,11 @@ var words = [
 	"zeker",
 	"zever",
 	"zeeen"];
-var startknop = document.createElement("BUTTON")
-startknop.innerHTML = 'Start'
-document.body.appendChild(startknop);
-startknop.onclick = start();
 
-function start(){	
 var random = Math.floor(Math.random() * 478) + 1;
-document.write(words[random]);
-}
+var woord = words[random];
+document.write(woord + '<br/>');
+
+var letter = woord.charAt(0)
+document.write(letter)
+document.getElementById('r1l1').innerHTML = letter

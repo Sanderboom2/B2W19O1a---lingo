@@ -1,0 +1,32 @@
+body{
+	background-color: lightblue;
+}
+.rows{
+	margin: 0 auto;
+	width: 350px;
+	background-color: white;
+}
+.rows>div{
+	border: 1px solid black;
+	display: inline-block;
+	width: 50px;
+	height: 42px;
+	margin: 10px 2px 10px 2px;
+	text-align: center;
+	padding-top: 8px;
+}
+#r1l1{
+	margin-left: 25px;
+}
+#r2l1{
+	margin-left: 25px;
+}
+#r3l1{
+	margin-left: 25px;
+}
+#r4l1{
+	margin-left: 25px;
+}
+#r5l1{
+	margin-left: 25px;
+}

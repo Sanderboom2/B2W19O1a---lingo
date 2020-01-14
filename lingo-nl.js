@@ -483,6 +483,21 @@ var random = Math.floor(Math.random() * 478) + 1;
 var woord = words[random];
 document.write(woord + '<br/>');
 
-var letter = woord.charAt(0)
-document.write(letter)
-document.getElementById('r1l1').innerHTML = letter
+var first = woord.charAt(0)
+document.getElementById('r1l1').innerHTML = first
+
+var letter = document.getElementById("letter");
+var button = document.getElementById("check");
+button.setAttribute("onclick", "checkWord(woord)");
+
+function checkWord(event){
+	var letters = event.value.split("");
+	console.log(letters);
+
+	for(i=0; i<5; i++){
+	if(letter.value == letters[i]){
+		document.getElementById("r1l" + (i+1)).innerHTML = letters[i];
+		document.getElementById("r1l" + (i+1)).style.backgroundColor = "green"
+	}
+}
+}

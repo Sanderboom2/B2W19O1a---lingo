@@ -481,27 +481,24 @@ var words = [
 
 var random = Math.floor(Math.random() * 478) + 1;
 var woord = words[random];
-document.write(woord + '<br/>');
+console.log(woord);
+var split
 
-var first = woord.charAt(0)
-document.getElementById('r1l1').innerHTML = first
-document.getElementById('r2l1').innerHTML = first
-document.getElementById('r3l1').innerHTML = first
-document.getElementById('r4l1').innerHTML = first
-document.getElementById('r5l1').innerHTML = first
+var first = woord.charAt(0);
+document.getElementById('r1l0').innerHTML = first
 
 var input = document.getElementById("input");
 var check = document.getElementById("check");
-check.setAttribute("onclick", "checkWord()");
+check.setAttribute("onclick", "check()");
 
-function checkWord(){
+function check(){
 	var letters = input.value.split("");
 	console.log(letters);
 
 	for(i=0; i<letters.lenght; i++){
 	if(input.value == letters[i]){
-		document.getElementById("r1l" + (i+1)).innerHTML = letters[i];
-		document.getElementById("r1l" + (i+1)).style.backgroundColor = "green"
+		document.getElementById("r1l" + i).innerHTML = letters[i];
+		document.getElementById("r1l" + i).style.backgroundColor = "green"
 	}
 }
 }
